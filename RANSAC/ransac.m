@@ -130,7 +130,7 @@ while (i<iterations)
         xB=ptsB(:,initSet);
         
         % Check for degeneracy
-        breakFlag=colCheck(xA, xB);
+        breakFlag=collinearityCheck(xA, xB);
         
         iCount=iCount+1;
     end
@@ -231,6 +231,6 @@ else
 end
 
 % Executed iterations
-fprintf(1,'Done in %d Iterations\n',i);
+fprintf(1,'\nRANSAC: Done in %d Iterations\n',i);
 
 end

@@ -1,4 +1,4 @@
-function [ check ] = colCheck( xA, xB )
+function [ check ] = collinearityCheck( xA, xB )
 % This function checks whether a set of points of up to 4 samples, contains
 % 3 points that are collinear. It is used by the ransac.m to determine if
 % an MSS that we picked is degenerated.
