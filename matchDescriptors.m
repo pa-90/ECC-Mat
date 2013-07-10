@@ -18,6 +18,16 @@ function [ mapping matches ] = matchDescriptors( descA, descB, ratio )
 % and the numbers correspond to the indexes of descB. Unsuccesful matchings
 % are marked as 0's
 
+% 0<=ratio<=1
+% Default: ratio=1
+if nargin==2
+    ratio=1;
+elseif nargin==3
+    if (ratio<=0) || (ratio>1)
+        error('Input ratio must be in the interval (0 1]');
+    end
+end
+
 % Number of descriptors for each image
 NoDescA=size(descA,2);
 NoDescB=size(descB,2);
